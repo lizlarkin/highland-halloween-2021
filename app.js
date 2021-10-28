@@ -13,7 +13,7 @@ var robButton = document.querySelector("#robBtn");
 var tinaButton = document.querySelector("#tinaBtn");
 var voteButton = document.querySelector("#voteBtn");
 
-
+let introEl = document.querySelector("#Intro-div");
 let angieEl = document.querySelector("#Angie-div");
 let bonnieEl = document.querySelector("#Bonnie-div");
 let claudiaEl = document.querySelector("#Claudia-div");
@@ -26,9 +26,9 @@ let miguelEl = document.querySelector("#Miguel-div");
 let premilaEl = document.querySelector("#Premila-div");
 let robEl = document.querySelector("#Rob-div");
 let tinaEl = document.querySelector("#Tina-div");
-let voteEl = document.querySelector("#survey-div");
 
-function reset () {
+function start () {
+    introEl.style.display="block";
     angieEl.style.display="none";
     bonnieEl.style.display="none";
     claudiaEl.style.display="none";
@@ -41,10 +41,25 @@ function reset () {
     premilaEl.style.display="none";
     robEl.style.display="none";
     tinaEl.style.display="none";
-    voteEl.style.display="none";
 }
 
-reset ()
+function reset () {
+    introEl.style.display="none";
+    angieEl.style.display="none";
+    bonnieEl.style.display="none";
+    claudiaEl.style.display="none";
+    fredEl.style.display="none";
+    jamesEl.style.display="none";
+    karlaEl.style.display="none";
+    lisaEl.style.display="none";
+    lizEl.style.display="none";
+    miguelEl.style.display="none";
+    premilaEl.style.display="none";
+    robEl.style.display="none";
+    tinaEl.style.display="none";
+}
+
+start();
 
 angieButton.addEventListener ("click", function() {
     reset()
@@ -107,8 +122,7 @@ tinaButton.addEventListener ("click", function() {
 });
 
 voteButton.addEventListener ("click", function() {
-    reset()
-    voteEl.style.display="block";
+    location.href = "https://www.surveymonkey.com/r/YQL8DSD";
 });
 
 
